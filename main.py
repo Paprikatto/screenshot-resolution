@@ -27,10 +27,8 @@ def on_left_click(event):
     global first_click
     global second_click
     if isinstance(event, mouse.ButtonEvent):
-        print(event)
         if event.event_type == 'down' and not first_click:
             first_click = mouse.get_position()
-            print(f"first click {first_click}")
         if event.event_type == 'up' and not second_click:
             second_click = mouse.get_position()
             calculate_screenshot_size()
